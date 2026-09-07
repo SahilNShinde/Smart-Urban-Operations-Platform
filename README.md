@@ -1,29 +1,29 @@
-# 🏙️ Smart Urban Operations Platform
+# Smart Urban Operations Platform
 
-An AI-powered **Smart City platform** being developed to support intelligent urban operations in Mumbai using Machine Learning and Digital Twin concepts.
+> **Status:** 🚧 **Active Development**
 
-## 🚀 Current Features
+An intelligent decision-support dashboard for emergency dispatchers and city planners to monitor urban disruptions, dynamically reroute emergency vehicles, and test disaster scenarios.
 
-* 🚗 **Traffic Prediction** – Predicts travel time and traffic conditions using Machine Learning.
-* 🌧️ **Flood Prediction** – Predicts flood/waterlogging conditions using Machine Learning.
+---
+
+## 🚀 Key Features
+
+* **🗺️ Interactive City Map:** Multi-layer GIS showing roads, traffic conditions, flood-risk zones, and hospitals.
+* **🚦 Live & Predicted Traffic:** Real-time speeds, congestion bottlenecks, and flow forecasting.
+* **🌧️ Flood Risk & Weather:** Real-time rainfall telemetry and topography-based inundation predictions.
+* **🏥 Hospital Status:** Real-time tracking of triage delays, operational capacity, and ICU/bed availability.
+* **🚑 Smart Emergency Routing:** Dynamic pathfinding balancing travel time, flood safety, and hospital intake readiness.
+* **🔮 What-If Simulator:** Run urban impact experiments across 3 initial scenarios:
+  * **Rainfall Shift:** Increase/decrease rain levels to evaluate waterlogged roads.
+  * **Road Closure:** Manually sever routes to observe secondary traffic choke points.
+  * **Hospital Offline:** Mark a medical center as unavailable to re-route inbound emergency vehicles.
+* **💬 AI Copilot:** Natural language assistant to query route safety, hospital availability, and scenario impacts.
+
+---
 
 ## 🛠️ Tech Stack
 
-**Python • Pandas • NumPy • Scikit-learn • FastAPI • Git**
+* **Frontend:** React, TypeScript, Mapbox GL / Leaflet
+* **Backend:** FastAPI (Python), NetworkX / OSRM (Dynamic Graph Routing)
+* **AI & Data:** LLM Agent (LangChain/LlamaIndex), PostGIS, Redis
 
-
-```
-
-## 📌 Project Status
-
-🚧 **Under Development**
-
-Currently, the platform includes the **Traffic Prediction Model** and **Flood Prediction Model**. Additional smart-city components and decision-support capabilities will be integrated in future development.
-
-## 🎯 Future Scope
-
-* 🧠 Decision Engine
-* 🗺️ GIS-based visualization
-* 🏥 Hospital/Emergency Intelligence
-* 🔮 What-If Scenario Simulation
-* 🌐 Digital Twin integration

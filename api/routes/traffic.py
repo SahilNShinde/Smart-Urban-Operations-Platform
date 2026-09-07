@@ -33,8 +33,8 @@ def predict_traffic(
         "Road_Length": 5.0
     })
 
-    speed = payload.Average_Speed if payload.Average_Speed is not None else (payload.Traffic_Speed or float(road_info.get("speed_limit_kmh", 50.0)))
-    length = payload.Road_Length if payload.Road_Length is not None else (payload.Road_Distance or float(road_info.get("length_km", 5.0)))
+    speed = payload.Average_Speed if payload.Average_Speed is not None else float(road_info.get("speed_limit_kmh", 50.0))
+    length = payload.Road_Length if payload.Road_Length is not None else float(road_info.get("length_km", 5.0))
 
     inp = {
         "hour": [payload.hour if payload.hour is not None else 10],

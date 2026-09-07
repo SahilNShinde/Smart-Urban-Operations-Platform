@@ -9,15 +9,22 @@ from pydantic import BaseModel, Field
 
 class TrafficPredictionInput(BaseModel):
     # 5 Core Features
-    hour: Optional[int] = Field(default=9, description="Timestamp / Hour of day (0-23)")
-    dow: Optional[int] = Field(default=1, description="Day of Week (0=Monday, 6=Sunday)")
-    Traffic_Volume: Optional[int] = Field(default=2800, description="Traffic volume (vehicle count)")
-    Average_Speed: Optional[float] = Field(default=45.0, description="Average speed in km/h")
-    Traffic_Speed: Optional[float] = Field(default=None, description="Alias for Average Speed")
-    Road_Length: Optional[float] = Field(default=5.4, description="Road distance/length in km")
-    Road_Distance: Optional[float] = Field(default=None, description="Alias for Road Distance")
+    hour: int = Field(default=9, description="Timestamp / Hour of day (0-23)", ge=0, le=23)
+    dow: int = Field(default=1, description="Day of Week (0=Monday, 6=Sunday)", ge=0, le=6)
+    Traffic_Volume: int = Field(default=2800, description="Traffic volume (vehicle count per hour)")
+    Average_Speed: float = Field(default=45.0, description="Average speed in km/h", gt=0.0)
+    Road_Length: float = Field(default=5.4, description="Road distance/length in km", gt=0.0)
     # Metadata context
-    segment_id: Optional[str] = Field(default="ROAD_WEH_01", json_schema_extra={"example": "ROAD_WEH_01"})
+    segment_id: Optional[str] = Field(default="ROAD_WEH_01", description="Road segment ID (optional)", json_schema_extra={"example": "ROAD_WEH_01"})
+
+    @classmethod
+    def model_validate(cls, obj, *args, **kwargs):
+        if isinstance(obj, dict):
+            if "Traffic_Speed" in obj and "Average_Speed" not in obj:
+                obj["Average_Speed"] = obj["Traffic_Speed"]
+            if "Road_Distance" in obj and "Road_Length" not in obj:
+                obj["Road_Length"] = obj["Road_Distance"]
+        return super().model_validate(obj, *args, **kwargs)
 
 
 class TrafficPredictionOutput(BaseModel):

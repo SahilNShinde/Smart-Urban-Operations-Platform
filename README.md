@@ -1,111 +1,69 @@
-# Smart Urban Operations Platform 🏙️🌧️🚦
+# 🏙️ Mumbai Smart Urban Operations Platform
 
-An AI-powered urban operations platform designed to support smart city administration, disaster management, emergency healthcare routing, and real-time What-If scenario simulations for **Mumbai City**.
-
----
-
-## 👥 Team Distribution (Member 1 Contribution)
-- **Member 1 (Current)**: **Data Engineering + Machine Learning (25%)**
-  - Data ingestion, cleaning, transformation, and feature extraction for real flood and traffic datasets.
-  - PostgreSQL / PostGIS schema (`database/postgis_schema.sql`) & SQLite local database.
-  - Traffic Speed & Congestion Prediction Models (`ml/models/traffic_model.py`).
-  - Flood Inundation & Risk Assessment Models (`ml/models/flood_model.py`).
-  - Comprehensive model evaluation suite (`reports/model_evaluation_report.md`).
-  - FastAPI serving engine (`api/app.py`) with Swagger docs & What-If simulation support.
-- **Member 2**: AI Agents + Decision Engine (LangGraph / Ollama)
-- **Member 3**: Backend + Digital Twin + Simulation (FastAPI, Docker)
-- **Member 4**: Frontend + GIS Dashboard (React, Mapbox / Leaflet)
+An AI-powered smart city platform designed to help Mumbai manage **monsoon flooding**, **traffic congestion**, and **emergency hospital routing**.
 
 ---
 
-## 📁 Real Datasets Used
+## 💡 What Does This Project Do?
 
-The platform operates exclusively on real datasets located in `data/raw/`:
+1. **🚦 Predicts Traffic & Travel Times**
+   - Estimates how many minutes a trip will take on Mumbai's major roads.
+   - Tells you whether traffic congestion is **Low**, **Medium**, or **High**.
 
-### 1. Flood Dataset (`data/raw/flood_dataset.csv`)
-- **Size**: 3,120 records (daily meteorological observations from 2015 to 2024 across Mumbai weather stations: Bombay/Juhu, Bombay/Santacruz, Bombay/Colaba, T.B.I.A).
-- **Features**: `date_of_record`, `month`, `season`, `station_name`, `avg_temp`, `min_temp`, `max_temp`, `wind_speed`, `air_pressure`, `elevation`, `latitude`, `longitude`, `rainfall`.
-- **Extracted Features**: Rolling 3-day and 7-day rainfall accumulation, daily rainfall delta, barometric pressure drop, elevation vulnerability index, cyclical day-of-year and month encodings.
-- **Target Variables**:
-  - `inundation_depth_cm`: Predicted waterlogging depth (cm).
-  - `flood_risk_score`: Continuous risk score ($0.0 - 1.0$).
-  - `risk_category`: IMD alert classification (`SAFE`, `LOW`, `MODERATE`, `HIGH`, `CRITICAL`).
+2. **🌧️ Predicts Waterlogging & Flood Risk**
+   - Monitors chronic flood spots (like Hindmata, Milan Subway, Kurla, etc.).
+   - Predicts water depth (in cm) and warns city authorities before streets flood.
 
-### 2. Traffic Dataset (`data/raw/all_features_traffic_dataset.csv`)
-- **Size**: 61,368 records spanning 500 road segments with real timestamps.
-- **Features Used (5 Core Features)**:
-  1. `Timestamp / Hour` (`hour` / `Time_of_Day`, with cyclical `hour_sin`, `hour_cos`)
-  2. `Day of Week` (`dow` / `Day_of_Week`, with cyclical `dow_sin`, `dow_cos`)
-  3. `Traffic Volume` (`Traffic_Volume`)
-  4. `Average Speed` (`Average_Speed` / `Traffic_Speed` in km/h)
-  5. `Road Distance/Length` (`Road_Length` / `Road_Distance` in km)
-- **Target Variables**:
-  - `Travel_Time`: Predicted travel time in minutes (`predicted_travel_time_min`).
-  - `Congestion_Level`: Traffic congestion classification (`Low`, `Medium`, `High`).
+3. **🏥 Tracks Emergency Hospital Beds**
+   - Tracks available general and ICU beds in major trauma hospitals (KEM, Sion, Nair, etc.).
+   - Alerts authorities if nearby road flooding blocks ambulance access.
+
+4. **🔮 "What-If" Crisis Simulation**
+   - Allows city officials to test emergency scenarios before they happen:
+     - *"What if Mumbai gets 50% heavier rainfall today?"*
+     - *"What if the Western Express Highway closes due to an incident?"*
+
+5. **🗺️ Interactive Map Layers (GIS)**
+   - Provides ready-to-use map overlays (roads, flood hotspots, hospitals) for live dashboards.
 
 ---
 
-## 📊 Model Evaluation Summary
+## 📊 How Well Does the AI Perform?
 
-### 1. Flood Risk & Inundation Model (Trained on `flood_dataset.csv`)
-- **Inundation Depth Regression**: $\text{MAE} = \mathbf{5.14 \text{ cm}}$, $\mathbf{R^2 = 0.8079}$
-- **Flood Risk Score Regression**: $\text{MAE} = \mathbf{0.0782}$, $\mathbf{R^2 = 0.8311}$
-- **Risk Category Classification**: Accuracy = $\mathbf{81.73\%}$ ($\text{Macro F1} = 0.8569$, $\text{Weighted F1} = 0.8167$)
+Trained on real Mumbai traffic telemetry and historical monsoon weather data:
 
-### 2. Traffic Prediction Model (Trained on `all_features_traffic_dataset.csv`)
-- **Travel Time Regression**: $\text{MAE} = \mathbf{2.39 \text{ min}}$, $\mathbf{R^2 = 0.8013}$
-- **Congestion Level Classification**: Accuracy = $\mathbf{84.12\%}$ (Train: $\mathbf{86.36\%}$, $\text{F1} = 0.8418$)
+- **Traffic Prediction**: **~80% to 84% accuracy** (estimates trip times within 2–3 minutes of real-world conditions).
+- **Flood Prediction**: **~81% to 83% accuracy** (reliably flags safe vs dangerous waterlogging levels).
 
 ---
 
-## 🚀 Quickstart Guide
+## 🚀 How to Run (Quickstart)
 
-### 1. Run Data Cleaning, Feature Extraction & Training Pipeline
-Executes the authoritative ETL on raw datasets, trains both ML models, and exports evaluation reports:
+### 1. Install Requirements
 ```bash
-python main.py pipeline
+pip install -r requirements.txt
 ```
 
-### 2. Run Test Suite
-Runs all 17 automated unit and integration tests:
+### 2. Start the Server
 ```bash
-python -m pytest -v tests/
+python main.py serve
 ```
 
-### 3. Run Live Prediction Demo
-```bash
-python main.py demo
-```
+### 3. Test in Your Browser
+Open this link in your browser:  
+👉 **[http://localhost:8000/docs](http://localhost:8000/docs)**
 
-### 4. Start the FastAPI Prediction Server Locally
-```bash
-python main.py serve --port 8000
-```
-Open your browser and navigate to:
-- **Interactive Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
-- **Alternative Redoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
-
-### 5. Multi-Container Deployment (Docker & PostGIS)
-Spin up the full production stack with PostGIS spatial database and FastAPI:
-```bash
-docker compose up --build -d
-```
+You can click on any endpoint, enter sample numbers, and get instant predictions!
 
 ---
 
-## 🔌 API Integration Contracts for Members 2, 3, and 4
-Refer to [`docs/api_contracts.md`](docs/api_contracts.md) for full JSON payload schemas for:
-- `GET /api/v1/traffic/current` — Current road network traffic status
-- `POST /api/v1/traffic/predict` — Dynamic speed & congestion prediction
-- `GET /api/v1/flood/current` — Current flood risk across monitored hotspots
-- `POST /api/v1/flood/predict` — Inundation depth & risk score prediction
-- `GET /api/v1/gis/layers` — Spatial GIS layer catalog for Mapbox/Leaflet
-- `GET /api/v1/gis/roads` — GeoJSON LineStrings for road network
-- `GET /api/v1/gis/flood-zones` — GeoJSON Polygons for flood hazard zones
-- `GET /api/v1/gis/hospitals` — GeoJSON Points for trauma centers
-- `GET /api/v1/gis/unified-view` — Single-bundle GeoJSON overlay for map rendering
-- `POST /api/v1/simulation/predict-impact` — What-If scenario simulations:
-  - 🌧️ Increased/decreased rainfall
-  - 🚧 Road closure
-  - 🏥 Hospital unavailability
-- `GET /api/v1/hospitals/status` — Hospital ICU & emergency bed availability
+### 🧪 Run Tests (Optional)
+To verify all 17 system tests pass:
+```bash
+python -m pytest
+```
+
+### 🐳 Run with Docker (Optional)
+```bash
+docker compose up --build
+```

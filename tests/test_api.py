@@ -86,3 +86,45 @@ def test_simulation_increased_rainfall():
     data = res.json()
     assert data["scenario_type"] == "increased_rainfall"
     assert len(data["affected_flood_zones"]) > 0
+
+
+def test_gis_layers_catalog():
+    res = client.get("/api/v1/gis/layers")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["city"] == "Mumbai"
+    assert len(data["layers"]) == 3
+
+
+def test_gis_roads_geojson():
+    res = client.get("/api/v1/gis/roads")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["type"] == "FeatureCollection"
+    assert len(data["features"]) == 15
+
+
+def test_gis_flood_zones_geojson():
+    res = client.get("/api/v1/gis/flood-zones")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["type"] == "FeatureCollection"
+    assert len(data["features"]) == 8
+
+
+def test_gis_hospitals_geojson():
+    res = client.get("/api/v1/gis/hospitals")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["type"] == "FeatureCollection"
+    assert len(data["features"]) == 8
+
+
+def test_gis_unified_overlay():
+    res = client.get("/api/v1/gis/unified-view")
+    assert res.status_code == 200
+    data = res.json()
+    assert data["city"] == "Mumbai"
+    assert "roads" in data
+    assert "flood_zones" in data
+    assert "hospitals" in data

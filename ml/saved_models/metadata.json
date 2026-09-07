@@ -1,0 +1,11 @@
+{
+  "dataset_source": "User Raw Datasets (flood_dataset.csv, all_features_traffic_dataset.csv)",
+  "trained_at": "2026-09-07T09:34:45.664822+00:00",
+  "models": {
+    "flood": {
+      "version": "2.0.0",
+      "test_samples": 624,
+      "algorithm": "HistGradientBoosting (Depth + Risk Score + Classifier)"
+    }
+  }
+}

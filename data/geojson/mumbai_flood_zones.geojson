@@ -1,0 +1,326 @@
+{
+  "type": "FeatureCollection",
+  "name": "mumbai_flood_zones",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.841,
+              19.012
+            ],
+            [
+              72.848,
+              19.012
+            ],
+            [
+              72.848,
+              19.02
+            ],
+            [
+              72.841,
+              19.02
+            ],
+            [
+              72.841,
+              19.012
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_HINDMATA",
+        "name": "Hindmata Junction & Dadar TT",
+        "ward": "F/South",
+        "catchment_basin": "Mahaim Creek / Central Mumbai",
+        "elevation_m": 2.8,
+        "drainage_capacity_index": 0.35,
+        "critical_threshold_rainfall_mm_h": 28.0,
+        "has_pumping_station": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.837,
+              19.081
+            ],
+            [
+              72.844,
+              19.081
+            ],
+            [
+              72.844,
+              19.087
+            ],
+            [
+              72.837,
+              19.087
+            ],
+            [
+              72.837,
+              19.081
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_MILAN",
+        "name": "Milan Subway (Santacruz West-East Link)",
+        "ward": "H/West",
+        "catchment_basin": "Gazdarbandh Nalla Catchment",
+        "elevation_m": 2.1,
+        "drainage_capacity_index": 0.25,
+        "critical_threshold_rainfall_mm_h": 22.0,
+        "has_pumping_station": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.854,
+              19.028
+            ],
+            [
+              72.863,
+              19.028
+            ],
+            [
+              72.863,
+              19.038
+            ],
+            [
+              72.854,
+              19.038
+            ],
+            [
+              72.854,
+              19.028
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_KINGS_CIRCLE",
+        "name": "King's Circle & Gandhi Market (Sion)",
+        "ward": "F/North",
+        "catchment_basin": "Sion Matunga Basin",
+        "elevation_m": 3.0,
+        "drainage_capacity_index": 0.3,
+        "critical_threshold_rainfall_mm_h": 25.0,
+        "has_pumping_station": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.868,
+              19.062
+            ],
+            [
+              72.88,
+              19.062
+            ],
+            [
+              72.88,
+              19.075
+            ],
+            [
+              72.868,
+              19.075
+            ],
+            [
+              72.868,
+              19.062
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_KURLA_MITHI",
+        "name": "Kurla West & Kranti Nagar (Mithi River Basin)",
+        "ward": "L Ward",
+        "catchment_basin": "Mithi River Catchment",
+        "elevation_m": 3.2,
+        "drainage_capacity_index": 0.2,
+        "critical_threshold_rainfall_mm_h": 20.0,
+        "has_pumping_station": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.842,
+              19.114
+            ],
+            [
+              72.849,
+              19.114
+            ],
+            [
+              72.849,
+              19.121
+            ],
+            [
+              72.842,
+              19.121
+            ],
+            [
+              72.842,
+              19.114
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_ANDHERI_SUBWAY",
+        "name": "Andheri Subway Underpass",
+        "ward": "K/West",
+        "catchment_basin": "Mogra Nalla Basin",
+        "elevation_m": 2.4,
+        "drainage_capacity_index": 0.22,
+        "critical_threshold_rainfall_mm_h": 20.0,
+        "has_pumping_station": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.871,
+              19.045
+            ],
+            [
+              72.882,
+              19.045
+            ],
+            [
+              72.882,
+              19.056
+            ],
+            [
+              72.871,
+              19.056
+            ],
+            [
+              72.871,
+              19.045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_CHUNABHATTI",
+        "name": "Chunabhatti / Sion Railway Lowlands",
+        "ward": "L Ward",
+        "catchment_basin": "Mahul Creek Drainage",
+        "elevation_m": 3.4,
+        "drainage_capacity_index": 0.35,
+        "critical_threshold_rainfall_mm_h": 30.0,
+        "has_pumping_station": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.848,
+              19.058
+            ],
+            [
+              72.858,
+              19.058
+            ],
+            [
+              72.858,
+              19.066
+            ],
+            [
+              72.848,
+              19.066
+            ],
+            [
+              72.848,
+              19.058
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_KALANAGAR",
+        "name": "Kalanagar Junction & BKC Entrance",
+        "ward": "H/East",
+        "catchment_basin": "Mithi Creek Outfall",
+        "elevation_m": 4.1,
+        "drainage_capacity_index": 0.45,
+        "critical_threshold_rainfall_mm_h": 35.0,
+        "has_pumping_station": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.854,
+              19.248
+            ],
+            [
+              72.868,
+              19.248
+            ],
+            [
+              72.868,
+              19.259
+            ],
+            [
+              72.854,
+              19.259
+            ],
+            [
+              72.854,
+              19.248
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "FLOOD_DAHISAR",
+        "name": "Dahisar River Lowlands & Subway",
+        "ward": "R/North",
+        "catchment_basin": "Dahisar River Basin",
+        "elevation_m": 4.5,
+        "drainage_capacity_index": 0.4,
+        "critical_threshold_rainfall_mm_h": 32.0,
+        "has_pumping_station": false
+      }
+    }
+  ]
+}

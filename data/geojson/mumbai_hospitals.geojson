@@ -1,0 +1,190 @@
+{
+  "type": "FeatureCollection",
+  "name": "mumbai_hospitals",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8427,
+          19.0026
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_KEM",
+        "name": "King Edward Memorial (KEM) Hospital",
+        "zone": "South Mumbai",
+        "category": "Municipal Apex Trauma Center",
+        "total_beds": 1800,
+        "available_beds": 210,
+        "icu_total": 120,
+        "icu_available": 14,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "MEDIUM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8601,
+          19.0354
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_SION",
+        "name": "Lokmanya Tilak Municipal General Hospital (Sion Hospital)",
+        "zone": "Eastern Suburbs",
+        "category": "Municipal Apex Trauma Center",
+        "total_beds": 1400,
+        "available_beds": 130,
+        "icu_total": 90,
+        "icu_available": 8,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "HIGH"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8276,
+          19.0514
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_LILAVATI",
+        "name": "Lilavati Hospital and Research Centre",
+        "zone": "Western Suburbs",
+        "category": "Superspecialty Private",
+        "total_beds": 320,
+        "available_beds": 45,
+        "icu_total": 60,
+        "icu_available": 11,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "LOW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8398,
+          19.0328
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_HINDUJA",
+        "name": "P.D. Hinduja National Hospital",
+        "zone": "South Mumbai",
+        "category": "Superspecialty Private",
+        "total_beds": 400,
+        "available_beds": 52,
+        "icu_total": 70,
+        "icu_available": 12,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "LOW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8364,
+          19.109
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_COOPER",
+        "name": "HBT Medical College and Dr. R.N. Cooper Hospital",
+        "zone": "Western Suburbs",
+        "category": "Municipal General Hospital",
+        "total_beds": 650,
+        "available_beds": 95,
+        "icu_total": 50,
+        "icu_available": 6,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "MEDIUM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8286,
+          18.9405
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_BOMBAY",
+        "name": "Bombay Hospital and Medical Research Centre",
+        "zone": "South Mumbai",
+        "category": "Superspecialty Private",
+        "total_beds": 750,
+        "available_beds": 110,
+        "icu_total": 95,
+        "icu_available": 18,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "LOW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8423,
+          19.0967
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_NANAVATI",
+        "name": "Nanavati Max Super Speciality Hospital",
+        "zone": "Western Suburbs",
+        "category": "Superspecialty Private",
+        "total_beds": 350,
+        "available_beds": 40,
+        "icu_total": 65,
+        "icu_available": 9,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "LOW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8436,
+          19.0044
+        ]
+      },
+      "properties": {
+        "hospital_id": "HOSP_TATA",
+        "name": "Tata Memorial Hospital",
+        "zone": "South Mumbai",
+        "category": "Specialized Oncology",
+        "total_beds": 600,
+        "available_beds": 65,
+        "icu_total": 50,
+        "icu_available": 5,
+        "has_emergency_ward": true,
+        "is_operational": true,
+        "flood_isolation_risk": "LOW"
+      }
+    }
+  ]
+}

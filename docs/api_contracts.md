@@ -140,6 +140,27 @@ Returns real-time capacity and flood isolation risk for all Mumbai hospitals.
 
 ---
 
+### E. GIS & Spatial Infrastructure (`/api/v1/gis`)
+
+Designed specifically for **Member 4 (Frontend / GIS Map)**:
+
+#### `GET /api/v1/gis/layers`
+Returns the metadata catalog of available GeoJSON layers.
+
+#### `GET /api/v1/gis/roads`
+Returns GeoJSON `FeatureCollection` of 15 major Mumbai highway and arterial road corridors with coordinates and attributes.
+
+#### `GET /api/v1/gis/flood-zones`
+Returns GeoJSON `FeatureCollection` of 8 chronic flood vulnerability hotspot polygons (Hindmata, Milan Subway, Kurla, Dharavi, etc.).
+
+#### `GET /api/v1/gis/hospitals`
+Returns GeoJSON `FeatureCollection` of 8 designated trauma & municipal emergency hospital points with coordinates and capacity.
+
+#### `GET /api/v1/gis/unified-view`
+Returns a unified JSON bundle containing all three spatial layers in a single request for fast map rendering.
+
+---
+
 ## 3. How to Run Locally
 
 ```bash

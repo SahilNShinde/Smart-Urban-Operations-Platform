@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.routes import traffic, flood, simulation, hospitals
+from api.routes import traffic, flood, simulation, hospitals, gis
 from api.dependencies import get_traffic_model, get_flood_model, get_db_manager
 
 
@@ -40,6 +40,7 @@ app.include_router(traffic.router)
 app.include_router(flood.router)
 app.include_router(simulation.router)
 app.include_router(hospitals.router)
+app.include_router(gis.router)
 
 
 @app.get("/api/v1/health", tags=["System Health"])

@@ -1,6 +1,6 @@
 # Smart Urban Operations Platform
 
-> **Status:** 🚧 **Active Development**
+
 
 An intelligent decision-support dashboard for emergency dispatchers and city planners to monitor urban disruptions, dynamically reroute emergency vehicles, and test disaster scenarios.
 
@@ -26,4 +26,8 @@ An intelligent decision-support dashboard for emergency dispatchers and city pla
 * **Frontend:** React, TypeScript, Mapbox GL / Leaflet
 * **Backend:** FastAPI (Python), NetworkX / OSRM (Dynamic Graph Routing)
 * **AI & Data:** LLM Agent (LangChain/LlamaIndex), PostGIS, Redis
+
+---
+
+> **Status:** 🚧 **Under Development**
 

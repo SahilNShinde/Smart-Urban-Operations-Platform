@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  # 1. PostGIS Geospatial Database Service
+  db:
+    image: postgis/postgis:15-3.3
+    container_name: urban_ops_postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: smart_urban_ops
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./database/postgis_schema.sql:/docker-entrypoint-initdb.d/01_postgis_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d smart_urban_ops"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - urban_net
+
+  # 2. FastAPI ML Prediction & What-If Simulation Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: urban_ops_api
+    restart: unless-stopped
+    environment:
+      PORT: 8000
+      HOST: "0.0.0.0"
+      DATABASE_URL: "postgresql://postgres:postgrespassword@db:5432/smart_urban_ops"
+      CITY: "Mumbai"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - urban_net
+
+volumes:
+  postgis_data:
+    driver: local
+
+networks:
+  urban_net:
+    driver: bridge

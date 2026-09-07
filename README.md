@@ -67,7 +67,7 @@ python main.py pipeline
 ```
 
 ### 2. Run Test Suite
-Runs all 12 automated unit and integration tests:
+Runs all 17 automated unit and integration tests:
 ```bash
 python -m pytest -v tests/
 ```
@@ -77,13 +77,19 @@ python -m pytest -v tests/
 python main.py demo
 ```
 
-### 4. Start the FastAPI Prediction Server
+### 4. Start the FastAPI Prediction Server Locally
 ```bash
 python main.py serve --port 8000
 ```
 Open your browser and navigate to:
 - **Interactive Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Alternative Redoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+### 5. Multi-Container Deployment (Docker & PostGIS)
+Spin up the full production stack with PostGIS spatial database and FastAPI:
+```bash
+docker compose up --build -d
+```
 
 ---
 
@@ -93,6 +99,11 @@ Refer to [`docs/api_contracts.md`](docs/api_contracts.md) for full JSON payload 
 - `POST /api/v1/traffic/predict` — Dynamic speed & congestion prediction
 - `GET /api/v1/flood/current` — Current flood risk across monitored hotspots
 - `POST /api/v1/flood/predict` — Inundation depth & risk score prediction
+- `GET /api/v1/gis/layers` — Spatial GIS layer catalog for Mapbox/Leaflet
+- `GET /api/v1/gis/roads` — GeoJSON LineStrings for road network
+- `GET /api/v1/gis/flood-zones` — GeoJSON Polygons for flood hazard zones
+- `GET /api/v1/gis/hospitals` — GeoJSON Points for trauma centers
+- `GET /api/v1/gis/unified-view` — Single-bundle GeoJSON overlay for map rendering
 - `POST /api/v1/simulation/predict-impact` — What-If scenario simulations:
   - 🌧️ Increased/decreased rainfall
   - 🚧 Road closure

@@ -1,0 +1,127 @@
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-color: #0f172a;
+}
+
+.searchBar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 320px;
+}
+
+.searchIcon {
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  width: 100%;
+  outline: none;
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: var(--text-secondary);
+}
+
+.legend {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10;
+  background-color: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  min-width: 180px;
+}
+
+.legendTitle {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.line {
+  display: inline-block;
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.placeholderMap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  position: relative;
+  overflow: hidden;
+}
+
+.mapGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+.placeholderIcon, .placeholderMap h3, .mapSubtitle {
+  z-index: 2;
+}
+
+.placeholderIcon {
+  margin-bottom: 16px;
+  opacity: 0.5;
+  color: var(--accent-blue);
+}
+
+.mapSubtitle {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 8px;
+}

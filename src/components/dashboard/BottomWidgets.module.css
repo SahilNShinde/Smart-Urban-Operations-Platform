@@ -1,0 +1,321 @@
+.widgetsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.link {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  gap: 8px;
+}
+
+.routeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.routeName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.summaryBox {
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.summaryLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.summaryValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.trendDown {
+  color: var(--status-red);
+  font-size: 0.85rem;
+}
+
+.mockChartLine {
+  width: 100px;
+  height: 30px;
+}
+
+.weatherTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.weatherIconBox {
+  width: 48px;
+  height: 48px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.weatherValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.weatherSub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.floodZones {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.zoneTitle {
+  font-size: 0.85rem;
+}
+.sub {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.zoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.zoneItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.weatherBottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.weatherStat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.statValue {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.hospitalItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hospitalIcon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--status-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hospitalInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.hospitalName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.hospitalCap {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.routeHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.routeCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
+.routeCol small {
+  color: var(--text-secondary);
+}
+
+.routeMetrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.routeMetrics small {
+  color: var(--text-secondary);
+}
+
+.runSimBtn {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.viewRouteBtn {
+  width: 100%;
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.altTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.viewAltBtn {
+  background-color: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.altList {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding-left: 16px;
+}
+
+.altList li {
+  list-style-type: disc;
+  margin-bottom: 4px;
+}
+
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.aiWelcome {
+  display: flex;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  background-color: rgba(59, 130, 246, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.promptBtn {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.promptBtn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.chatInputBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.chatInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.sendBtn {
+  color: var(--accent-blue);
+}
+
+

@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--accent-blue);
+}
+
+.buildings {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.building {
+  width: 8px;
+  background-color: var(--accent-blue);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  font-size: 0.75rem;
+}
+
+.temp {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.icon {
+  color: var(--text-secondary);
+}
+
+.iconBlue {
+  color: var(--accent-blue);
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border-color);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron {
+  color: var(--text-secondary);
+}

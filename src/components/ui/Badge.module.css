@@ -1,0 +1,37 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.green {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.yellow {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+}
+
+.orange {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #fb923c;
+}
+
+.red {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.blue {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}

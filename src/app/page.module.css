@@ -1,0 +1,31 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.topSection {
+  display: flex;
+  gap: 16px;
+}
+
+.mainCol {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 350px;
+}
+
+@media (max-width: 1200px) {
+  .topSection {
+    flex-direction: column;
+  }
+}

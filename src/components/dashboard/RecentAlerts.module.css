@@ -1,0 +1,41 @@
+.viewAll {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alertItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.time {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.message {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}

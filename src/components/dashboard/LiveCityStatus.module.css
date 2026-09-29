@@ -1,0 +1,58 @@
+.liveIndicator {
+  color: var(--status-green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.statusItem {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.iconGreen { color: var(--status-green); }
+.iconBlue { color: var(--accent-blue); }
+.iconPurple { color: #8b5cf6; }
+.iconRed { color: var(--status-red); }
+
+.itemInfo h4 {
+  margin: 0 0 2px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.itemInfo p {
+  margin: 0 0 2px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.itemInfo small {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.sparkline {
+  height: 40px;
+  width: 100%;
+}

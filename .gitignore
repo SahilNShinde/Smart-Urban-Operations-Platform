@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ==========================================
+# Backend & Data Pipeline Exclusions
+# ==========================================
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# Ignore full datasets
+backend/data/raw/*.csv
+backend/data/processed/*.csv
+
+# Allow tracked schema previews
+!backend/data/raw/accidents_sample.csv
+!backend/data/processed/flood_sample.csv
+!backend/data/processed/cleaned_sample.csv

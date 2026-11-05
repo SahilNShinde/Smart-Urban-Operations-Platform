@@ -56,3 +56,17 @@ backend/data/processed/*.csv
 !backend/data/raw/accidents_sample.csv
 !backend/data/processed/flood_sample.csv
 !backend/data/processed/cleaned_sample.csv
+
+# Ignore all CSV files in scripts
+backend/scripts/*.csv
+
+# Allow one reference CSV
+!backend/scripts/mumbai_weather_terrain_combined_sample.csv
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+**/.ipynb_checkpoints/
+
+backend/scripts/mumbai_osm_terrain_raw.json
+backend/scripts/bhuvan_flood_maps/
